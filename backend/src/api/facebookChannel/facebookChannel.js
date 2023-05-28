@@ -1,5 +1,4 @@
-const restful = require('node-restful')
-const mongoose = restful.mongoose
+const mongoose = require('mongoose')
 
 const postSchema = new mongoose.Schema({
     title: { type: String, required: true },
@@ -28,4 +27,4 @@ const facebookChannelSchema = new mongoose.Schema({
     posts: [postSchema]
 })
 
-module.exports = restful.model('FacebookChannel', facebookChannelSchema)
+module.exports = mongoose.model('FacebookChannel', facebookChannelSchema)
